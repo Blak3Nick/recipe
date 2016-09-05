@@ -1,14 +1,14 @@
-import {Directive, ElementRef, Renderer, HostListener, HostBinding} from '@angular/core';
+import {Directive, ElementRef, Renderer, HostListener, HostBinding, Input, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[highlight]'
 })
 export class HighlightDirective {
    @HostListener('mouseenter') mouseover(){
-     this.backgroundColor = 'green';
+     this.backgroundColor = this.highlightColor;
    };
   @HostListener('mouseleave') mouseleave(){
-    this.backgroundColor = 'white';
+    this.backgroundColor = this.defaultColor;
   };
    @HostBinding('style.backgroundColor') get setColor() {
      return this.backgroundColor;
@@ -17,10 +17,14 @@ export class HighlightDirective {
     onClick(event) {
      console.log('Success' + event.target);
    }
-   private backgroundColor = 'white';
+   @Input() defaultColor = 'white';
+   @Input('highlight') highlightColor = 'green';
+   private backgroundColor: string;
   constructor(private elementREf: ElementRef, private renderer: Renderer) {
     //this.elementREf.nativeElement.style.backgroundColor = 'green';
     //this.renderer.setElementStyle(this.elementREf.nativeElement, 'background-color', 'blue');
   }
-
+  ngOnInit(){
+    this.backgroundColor = this.defaultColor;
+  }
 }
