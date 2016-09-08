@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { LogService } from '../log.service';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'rb-shopping-list-add',
   templateUrl: './shopping-list-add.component.html',
-  providers: [LogService]
+  providers: [LogService, DataService]
 })
-export class ShoppingListAddComponent implements OnInit {
-
-  constructor(private logService: LogService ) { }
+export class ShoppingListAddComponent {
+  value = '';
+  items: string[] = [];
+  constructor(private logService: LogService, private dataService: DataService) { }
 
   onLog(value: string) {
     this.logService.writeToLog(value);
   }
-  ngOnInit() {
-  }
 
+  onStore(value: string) {
+    this.dataService.addData(value);
+  }
+  onGet() {
+    this.items = this.dataService.getData();
+  }
 }

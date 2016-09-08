@@ -25,5 +25,17 @@
 <div class="row">
   <input type="text" #input>
   <button (click)="onLog(input.value)">Log</button>
-  <button >Store</button>
+  <button (click)="onStore(input.value)">Store</button>
+  <button></button>
+  <hr>
+  <div>
+    <button (click)="onGet()">Refresh Storage</button>
+    <h3>Storage</h3>
+    <ul>
+      <li *ngFor="let item of items">{{item}}</li>
+
+    </ul>
+    <h3>Received Value</h3>
+    <p>{{value}}</p>
+  </div>
 </div>
