@@ -17,6 +17,7 @@ import { UnlessDirective } from './directives/unless.directive';
 import { DropdownDirective } from './dropdown.directive';
 import {LogService} from "./log.service";
 import {DataService} from "./data.service";
+import {ShoppingListService} from "./shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import {DataService} from "./data.service";
     FormsModule,
     HttpModule
   ],
-  providers: [LogService, DataService],
+  providers: [LogService, DataService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

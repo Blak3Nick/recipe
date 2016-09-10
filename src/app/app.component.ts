@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 import { HeaderComponent} from "./header.component";
 import { RecipesComponent} from "./recipes";
 import {RecipeService} from "./recipes/recipe.service";
+
 
 @Component({
   selector: 'rb-root',
