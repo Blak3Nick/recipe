@@ -18,6 +18,9 @@ import { DropdownDirective } from './dropdown.directive';
 import {LogService} from "./log.service";
 import {DataService} from "./data.service";
 import {ShoppingListService} from "./shopping-list.service";
+import { SampleRouteComponent } from './sample-route/sample-route.component';
+import { routing} from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import {ShoppingListService} from "./shopping-list.service";
     DirectivesComponent,
     HighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    SampleRouteComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [LogService, DataService, ShoppingListService],
   bootstrap: [AppComponent]
