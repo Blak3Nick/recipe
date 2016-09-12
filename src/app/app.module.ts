@@ -20,6 +20,7 @@ import {DataService} from "./data.service";
 import {ShoppingListService} from "./shopping-list.service";
 import { SampleRouteComponent } from './sample-route/sample-route.component';
 import { routing} from './app.routes';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { routing} from './app.routes';
     HighlightDirective,
     UnlessDirective,
     DropdownDirective,
-    SampleRouteComponent
+    SampleRouteComponent,
+    UserComponent
 
   ],
   imports: [
