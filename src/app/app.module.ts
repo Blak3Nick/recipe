@@ -20,6 +20,7 @@ import {DataService} from "./data.service";
 import {ShoppingListService} from "./shopping-list.service";
 import { SampleRouteComponent } from './sample-route/sample-route.component';
 import { routing} from './app.routes';
+import {UserComponent} from "./user/user.component";
 
 
 
@@ -39,7 +40,8 @@ import { routing} from './app.routes';
     UnlessDirective,
     DropdownDirective,
     SampleRouteComponent,
-   
+    UserComponent
+
   ],
   imports: [
     BrowserModule,
