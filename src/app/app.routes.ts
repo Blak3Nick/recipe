@@ -10,7 +10,7 @@ import {UserComponent} from "./user/user.component";
 const APP_ROUTES = [
   { path: 'sample', component: SampleRouteComponent },
   { path: '', component: AppComponent},
-  { path: 'user', component: UserComponent}
+  { path: 'user/:id', component: UserComponent}
 
 
 ];

@@ -18,9 +18,9 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">link</a></li>
+        <input type="text" #id (input)="0">
         <li class="dropdown">
-          <a [routerLink]="['/user']" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <a [routerLink]="['/user', id.value]" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Login</a></li>
             <li><a href="#">Other</a></li>
