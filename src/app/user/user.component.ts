@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
     <hr>
     {{id}}
     <button (click)="onNavigate()">Press me Bitch</button>
-    <rb-user-edit></rb-user-edit>
+    
     
 `,
   styleUrls: ['./user.component.css']

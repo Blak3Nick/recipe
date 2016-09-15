@@ -5,6 +5,7 @@ import {UserComponent} from "./user/user.component";
 import {MainComponent} from "./main/main.component";
 
 
+
 const APP_ROUTES = [
   { path: 'sample', component: SampleRouteComponent },
 

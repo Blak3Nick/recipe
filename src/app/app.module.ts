@@ -25,6 +25,7 @@ import {UserEditComponent} from './user-edit/user-edit.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import {UserEditComponent} from './user-edit/user-edit.component';
     SampleRouteComponent,
     UserComponent,
     UserEditComponent
+
 
   ],
   imports: [
