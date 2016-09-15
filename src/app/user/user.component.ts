@@ -1,7 +1,7 @@
 import {Component, OnDestroy} from '@angular/core';
 import {Router, ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";
-import {HeaderComponent} from '../header.component';
+
 
 @Component({
   selector: 'rb-user',
@@ -9,6 +9,9 @@ import {HeaderComponent} from '../header.component';
     <h1>User Page</h1>
     <hr>
     {{id}}
+    <button (click)="onNavigate()">Press me Bitch</button>
+    <rb-user-edit></rb-user-edit>
+    
 `,
   styleUrls: ['./user.component.css']
 })
@@ -20,7 +23,9 @@ export class UserComponent implements OnDestroy {
       (param: any) => this.id = param['id']
     );
   }
-
+  onNavigate() {
+    this.router.navigate(['/'], {queryParams: {'analytics': 100}});
+  }
   ngOnInit() {
   }
   ngOnDestroy() {

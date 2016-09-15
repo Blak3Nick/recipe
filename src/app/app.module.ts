@@ -21,6 +21,7 @@ import {ShoppingListService} from "./shopping-list.service";
 import { SampleRouteComponent } from './sample-route/sample-route.component';
 import { routing} from './app.routes';
 import {UserComponent} from "./user/user.component";
+import {UserEditComponent} from './user-edit/user-edit.component';
 
 
 
@@ -40,7 +41,8 @@ import {UserComponent} from "./user/user.component";
     UnlessDirective,
     DropdownDirective,
     SampleRouteComponent,
-    UserComponent
+    UserComponent,
+    UserEditComponent
 
   ],
   imports: [

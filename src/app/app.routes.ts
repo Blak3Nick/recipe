@@ -1,7 +1,6 @@
 import {SampleRouteComponent} from "./sample-route/sample-route.component";
 
-import {RouterModule, Routes } from "@angular/router";
-import {AppComponent} from "./app.component";
+import {RouterModule } from "@angular/router";
 import {UserComponent} from "./user/user.component";
 import {MainComponent} from "./main/main.component";
 
