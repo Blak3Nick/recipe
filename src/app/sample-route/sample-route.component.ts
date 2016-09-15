@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderComponent} from '../header.component';
 
 @Component({
   selector: 'rb-sample-route',
